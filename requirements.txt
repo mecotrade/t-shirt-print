@@ -1,0 +1,10 @@
+git+https://github.com/sberbank-ai/Real-ESRGAN.git
+-f https://download.pytorch.org/whl/cu121
+torch
+torchaudio
+torchvision
+diffusers
+accelerate
+numpy
+pillow>=10.3.0
+transformers>=4.39.3
