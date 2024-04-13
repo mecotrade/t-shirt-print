@@ -77,7 +77,7 @@ if __name__ == '__main__':
         raise ValueError('Either resolution or shape must be set')
 
     huggingface_token = args.token or os.environ['HUGGINGFACE_AUTH_TOKEN']
-    huggingface_cache = args.cache_folder or os.environ['HUGGINGFACE_HUB_CACHE'] or 'huggingface'
+    huggingface_cache = args.cache_folder or os.environ.get('HUGGINGFACE_HUB_CACHE', None) or 'huggingface'
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
